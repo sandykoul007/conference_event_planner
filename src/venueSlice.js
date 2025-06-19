@@ -42,7 +42,9 @@ export const venueSlice = createSlice({
       const { payload: index } = action;
       if (state[index]) {
         if (state[index].name === " Auditorium Hall (Capacity:200)" && state[index].quantity >= 3) {
-          return;        }
+          return;        } else if (state[index].quantity >= 10){
+           return 
+          }
         state[index].quantity++;
       }
     },
